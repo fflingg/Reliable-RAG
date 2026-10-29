@@ -1,0 +1,28 @@
+{
+  "dataset": "SufficiencyBench",
+  "version": "1.1",
+  "verified_at_utc": "2026-10-28T07:07:50.374863+00:00",
+  "files": [
+    {
+      "split": "train",
+      "file": "train.json",
+      "url": "https://raw.githubusercontent.com/inab-lab/SufficiencyBench/main/datasets_for_github/sufficiencybench/train.json",
+      "bytes": 6296230,
+      "sha256": "d6db853d36e9e1dcbeaeffe9e54332cb08d3c1a9e750512fd6ddf3577e06f326"
+    },
+    {
+      "split": "validation",
+      "file": "val.json",
+      "url": "https://raw.githubusercontent.com/inab-lab/SufficiencyBench/main/datasets_for_github/sufficiencybench/val.json",
+      "bytes": 1301370,
+      "sha256": "1ea139ac0d7dddd9f7129109dfc76169790bb87915fb30d0ac97bc5284a39d2d"
+    },
+    {
+      "split": "test",
+      "file": "test.json",
+      "url": "https://raw.githubusercontent.com/inab-lab/SufficiencyBench/main/datasets_for_github/sufficiencybench/test.json",
+      "bytes": 4933616,
+      "sha256": "5232c10d2ca4cfc9d4c9513fc2c57ff01a56a7c16774502afe288f5500b3dbb2"
+    }
+  ]
+}

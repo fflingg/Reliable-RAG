@@ -1,0 +1,12 @@
+{
+  "python": "3.13.12",
+  "cuda": "11.8",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "packages": {
+    "torch": "2.7.1+cu118",
+    "transformers": "5.21.0",
+    "accelerate": "1.15.0",
+    "sentencepiece": "0.2.2",
+    "bitsandbytes": "0.50.2"
+  }
+}

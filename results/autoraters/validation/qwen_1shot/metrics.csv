@@ -1,0 +1,2 @@
+autorater,status,expected,completed,errors,F1 Score,Accuracy,Precision,Recall,TP,TN,FP,FN
+qwen_1shot,complete,528,528,0,0.8389513108614232,0.8371212121212122,0.8296296296296296,0.8484848484848485,224,218,46,40

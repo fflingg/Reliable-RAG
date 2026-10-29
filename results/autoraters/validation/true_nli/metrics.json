@@ -1,0 +1,22 @@
+[
+  {
+    "autorater": "true_nli",
+    "expected": 528,
+    "completed": 528,
+    "valid_predictions": 523,
+    "invalid_outputs": 5,
+    "invalid_positive": 0,
+    "invalid_negative": 5,
+    "invalid_output_policy": "count_as_wrong; invalid positive=FN, invalid negative=FP; raw prediction remains null",
+    "errors": 0,
+    "status": "complete",
+    "F1 Score": 0.8316831683168316,
+    "Accuracy": 0.8390151515151515,
+    "Precision": 0.8713692946058091,
+    "Recall": 0.7954545454545454,
+    "TP": 210,
+    "TN": 233,
+    "FP": 31,
+    "FN": 54
+  }
+]

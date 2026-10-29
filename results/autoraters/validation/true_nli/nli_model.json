@@ -1,0 +1,6 @@
+{
+  "model": "google/t5_xxl_true_nli_mixture",
+  "resolved_revision": null,
+  "dtype": "torch.float32",
+  "device": "cuda:0"
+}

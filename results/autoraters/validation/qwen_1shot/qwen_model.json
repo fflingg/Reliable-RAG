@@ -1,0 +1,6 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "resolved_revision": null,
+  "dtype": "torch.bfloat16",
+  "device": "cuda:0"
+}

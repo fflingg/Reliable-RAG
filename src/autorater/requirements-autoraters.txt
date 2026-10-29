@@ -1,0 +1,8 @@
+# Install PyTorch with a CUDA build compatible with the allocated GPU/driver first.
+transformers>=5.2,<6
+accelerate>=1.10,<2
+sentencepiece>=0.2,<1
+bitsandbytes>=0.48,<1
+pandas>=2.2,<4
+protobuf>=5,<8
+safetensors>=0.6,<1

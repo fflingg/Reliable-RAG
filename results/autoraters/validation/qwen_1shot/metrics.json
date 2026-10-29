@@ -1,0 +1,17 @@
+[
+  {
+    "autorater": "qwen_1shot",
+    "expected": 528,
+    "completed": 528,
+    "errors": 0,
+    "status": "complete",
+    "F1 Score": 0.8389513108614232,
+    "Accuracy": 0.8371212121212122,
+    "Precision": 0.8296296296296296,
+    "Recall": 0.8484848484848485,
+    "TP": 224,
+    "TN": 218,
+    "FP": 46,
+    "FN": 40
+  }
+]

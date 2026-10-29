@@ -1,0 +1,21 @@
+{
+  "dataset": "SQuAD 2.0",
+  "license": "CC BY-SA 4.0",
+  "verified_at_utc": "2026-10-28T06:01:59.766239+00:00",
+  "files": [
+    {
+      "split": "train",
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json",
+      "file": "train-v2.0.json",
+      "bytes": 42123633,
+      "sha256": "68dcfbb971bd3e96d5b46c7177b16c1a4e7d4bdef19fb204502738552dede002"
+    },
+    {
+      "split": "validation",
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+      "file": "dev-v2.0.json",
+      "bytes": 4370528,
+      "sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8"
+    }
+  ]
+}

@@ -1,0 +1,560 @@
+{
+  "model": "google/t5_xxl_true_nli_mixture",
+  "requested_revision": "main",
+  "torch": "2.7.1+cu118",
+  "transformers": "5.21.0",
+  "condition_ids": [
+    "squad_10820_insuf",
+    "squad_10820_suf"
+  ],
+  "runs": [
+    {
+      "mode": "fp32_cpu",
+      "status": "complete",
+      "samples": [
+        {
+          "condition_id": "squad_10820_insuf",
+          "label": 0,
+          "input_tokens": 447,
+          "first_step_logits": {
+            "nan_count": 0,
+            "positive_inf_count": 0,
+            "negative_inf_count": 0,
+            "all_finite": true,
+            "label_first_token_logits": {
+              "0": -1.3815642595291138,
+              "1": -8.960867881774902
+            },
+            "eos_logit": -14.285482406616211,
+            "top_tokens": [
+              {
+                "id": 3,
+                "token": "▁",
+                "logit": -1.3815642595291138
+              },
+              {
+                "id": 209,
+                "token": "▁1",
+                "logit": -8.960867881774902
+              },
+              {
+                "id": 8,
+                "token": "▁the",
+                "logit": -13.567630767822266
+              },
+              {
+                "id": 5,
+                "token": ".",
+                "logit": -13.60897159576416
+              },
+              {
+                "id": 6,
+                "token": ",",
+                "logit": -13.720943450927734
+              },
+              {
+                "id": 41,
+                "token": "▁(",
+                "logit": -13.752771377563477
+              },
+              {
+                "id": 46,
+                "token": "▁an",
+                "logit": -13.771283149719238
+              },
+              {
+                "id": 20,
+                "token": "▁de",
+                "logit": -13.846949577331543
+              }
+            ]
+          },
+          "sequence_ids": [
+            0,
+            3,
+            3,
+            3
+          ],
+          "tokens": [
+            "<pad>",
+            "▁",
+            "▁",
+            "▁"
+          ],
+          "decoded_with_special_tokens": "<pad>   ",
+          "decoded": "",
+          "generation_step_scores": [
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -1.3815642595291138,
+                "1": -8.960867881774902
+              },
+              "eos_logit": -14.285482406616211,
+              "top_tokens": [
+                {
+                  "id": 3,
+                  "token": "▁",
+                  "logit": -1.3815642595291138
+                },
+                {
+                  "id": 209,
+                  "token": "▁1",
+                  "logit": -8.960867881774902
+                },
+                {
+                  "id": 8,
+                  "token": "▁the",
+                  "logit": -13.567630767822266
+                },
+                {
+                  "id": 5,
+                  "token": ".",
+                  "logit": -13.60897159576416
+                },
+                {
+                  "id": 6,
+                  "token": ",",
+                  "logit": -13.720943450927734
+                },
+                {
+                  "id": 41,
+                  "token": "▁(",
+                  "logit": -13.752771377563477
+                },
+                {
+                  "id": 46,
+                  "token": "▁an",
+                  "logit": -13.771283149719238
+                },
+                {
+                  "id": 20,
+                  "token": "▁de",
+                  "logit": -13.846949577331543
+                }
+              ]
+            },
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -3.0844333171844482,
+                "1": -16.275854110717773
+              },
+              "eos_logit": -21.018707275390625,
+              "top_tokens": [
+                {
+                  "id": 3,
+                  "token": "▁",
+                  "logit": -3.0844333171844482
+                },
+                {
+                  "id": 209,
+                  "token": "▁1",
+                  "logit": -16.275854110717773
+                },
+                {
+                  "id": 632,
+                  "token": "0",
+                  "logit": -18.33954620361328
+                },
+                {
+                  "id": 1,
+                  "token": "</s>",
+                  "logit": -21.018707275390625
+                },
+                {
+                  "id": 5,
+                  "token": ".",
+                  "logit": -25.361265182495117
+                },
+                {
+                  "id": 6,
+                  "token": ",",
+                  "logit": -25.56970977783203
+                },
+                {
+                  "id": 10,
+                  "token": ":",
+                  "logit": -25.726293563842773
+                },
+                {
+                  "id": 41,
+                  "token": "▁(",
+                  "logit": -25.97934341430664
+                }
+              ]
+            },
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -6.973066806793213,
+                "1": -31.052202224731445
+              },
+              "eos_logit": -24.08188819885254,
+              "top_tokens": [
+                {
+                  "id": 3,
+                  "token": "▁",
+                  "logit": -6.973066806793213
+                },
+                {
+                  "id": 632,
+                  "token": "0",
+                  "logit": -14.364940643310547
+                },
+                {
+                  "id": 1,
+                  "token": "</s>",
+                  "logit": -24.08188819885254
+                },
+                {
+                  "id": 209,
+                  "token": "▁1",
+                  "logit": -31.052202224731445
+                },
+                {
+                  "id": 9,
+                  "token": "a",
+                  "logit": -33.766761779785156
+                },
+                {
+                  "id": 1206,
+                  "token": "00",
+                  "logit": -33.849544525146484
+                },
+                {
+                  "id": 10,
+                  "token": ":",
+                  "logit": -34.05891799926758
+                },
+                {
+                  "id": 5,
+                  "token": ".",
+                  "logit": -34.418827056884766
+                }
+              ]
+            }
+          ],
+          "seconds": 115.711,
+          "valid_binary_label": false,
+          "label_sequence_scores": {
+            "0": {
+              "target_ids_including_eos": [
+                3,
+                632,
+                1
+              ],
+              "all_logits_finite": true,
+              "token_log_probabilities": [
+                -0.0007625294383615255,
+                -15.255132675170898,
+                0.0
+              ],
+              "sum_log_probability": -15.255895614624023,
+              "mean_log_probability": -5.085298538208008
+            },
+            "1": {
+              "target_ids_including_eos": [
+                209,
+                1
+              ],
+              "all_logits_finite": true,
+              "token_log_probabilities": [
+                -7.580063343048096,
+                -3.819124221801758
+              ],
+              "sum_log_probability": -11.399187088012695,
+              "mean_log_probability": -5.699593544006348
+            }
+          }
+        },
+        {
+          "condition_id": "squad_10820_suf",
+          "label": 1,
+          "input_tokens": 465,
+          "first_step_logits": {
+            "nan_count": 0,
+            "positive_inf_count": 0,
+            "negative_inf_count": 0,
+            "all_finite": true,
+            "label_first_token_logits": {
+              "0": -3.0721118450164795,
+              "1": -3.78891658782959
+            },
+            "eos_logit": -13.046374320983887,
+            "top_tokens": [
+              {
+                "id": 3,
+                "token": "▁",
+                "logit": -3.0721118450164795
+              },
+              {
+                "id": 209,
+                "token": "▁1",
+                "logit": -3.78891658782959
+              },
+              {
+                "id": 204,
+                "token": "▁2",
+                "logit": -12.398594856262207
+              },
+              {
+                "id": 632,
+                "token": "0",
+                "logit": -12.73850154876709
+              },
+              {
+                "id": 20,
+                "token": "▁de",
+                "logit": -12.927709579467773
+              },
+              {
+                "id": 220,
+                "token": "▁3",
+                "logit": -12.941335678100586
+              },
+              {
+                "id": 1,
+                "token": "</s>",
+                "logit": -13.046374320983887
+              },
+              {
+                "id": 314,
+                "token": "▁4",
+                "logit": -13.151261329650879
+              }
+            ]
+          },
+          "sequence_ids": [
+            0,
+            3,
+            632,
+            1
+          ],
+          "tokens": [
+            "<pad>",
+            "▁",
+            "0",
+            "</s>"
+          ],
+          "decoded_with_special_tokens": "<pad> 0</s>",
+          "decoded": "0",
+          "generation_step_scores": [
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -3.0721118450164795,
+                "1": -3.78891658782959
+              },
+              "eos_logit": -13.046374320983887,
+              "top_tokens": [
+                {
+                  "id": 3,
+                  "token": "▁",
+                  "logit": -3.0721118450164795
+                },
+                {
+                  "id": 209,
+                  "token": "▁1",
+                  "logit": -3.78891658782959
+                },
+                {
+                  "id": 204,
+                  "token": "▁2",
+                  "logit": -12.398594856262207
+                },
+                {
+                  "id": 632,
+                  "token": "0",
+                  "logit": -12.73850154876709
+                },
+                {
+                  "id": 20,
+                  "token": "▁de",
+                  "logit": -12.927709579467773
+                },
+                {
+                  "id": 220,
+                  "token": "▁3",
+                  "logit": -12.941335678100586
+                },
+                {
+                  "id": 1,
+                  "token": "</s>",
+                  "logit": -13.046374320983887
+                },
+                {
+                  "id": 314,
+                  "token": "▁4",
+                  "logit": -13.151261329650879
+                }
+              ]
+            },
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -36.44718933105469,
+                "1": -42.84955978393555
+              },
+              "eos_logit": -18.85926055908203,
+              "top_tokens": [
+                {
+                  "id": 632,
+                  "token": "0",
+                  "logit": -0.23394900560379028
+                },
+                {
+                  "id": 1,
+                  "token": "</s>",
+                  "logit": -18.85926055908203
+                },
+                {
+                  "id": 9498,
+                  "token": "0-",
+                  "logit": -19.769601821899414
+                },
+                {
+                  "id": 1206,
+                  "token": "00",
+                  "logit": -21.167081832885742
+                },
+                {
+                  "id": 3076,
+                  "token": "05",
+                  "logit": -22.26959991455078
+                },
+                {
+                  "id": 28363,
+                  "token": "570",
+                  "logit": -22.730621337890625
+                },
+                {
+                  "id": 6932,
+                  "token": "0%",
+                  "logit": -23.157873153686523
+                },
+                {
+                  "id": 25946,
+                  "token": "316",
+                  "logit": -23.169950485229492
+                }
+              ]
+            },
+            {
+              "nan_count": 0,
+              "positive_inf_count": 0,
+              "negative_inf_count": 0,
+              "all_finite": true,
+              "label_first_token_logits": {
+                "0": -28.15867042541504,
+                "1": -34.29620361328125
+              },
+              "eos_logit": 0.11888453364372253,
+              "top_tokens": [
+                {
+                  "id": 1,
+                  "token": "</s>",
+                  "logit": 0.11888453364372253
+                },
+                {
+                  "id": 30475,
+                  "token": "effort",
+                  "logit": -21.70072364807129
+                },
+                {
+                  "id": 31360,
+                  "token": "Submitted",
+                  "logit": -22.111669540405273
+                },
+                {
+                  "id": 5120,
+                  "token": "sized",
+                  "logit": -22.125246047973633
+                },
+                {
+                  "id": 8691,
+                  "token": "Located",
+                  "logit": -22.20418357849121
+                },
+                {
+                  "id": 28363,
+                  "token": "570",
+                  "logit": -22.437545776367188
+                },
+                {
+                  "id": 19440,
+                  "token": "Originally",
+                  "logit": -22.720335006713867
+                },
+                {
+                  "id": 11060,
+                  "token": "voted",
+                  "logit": -22.98822021484375
+                }
+              ]
+            }
+          ],
+          "seconds": 120.502,
+          "valid_binary_label": true,
+          "label_sequence_scores": {
+            "0": {
+              "target_ids_including_eos": [
+                3,
+                632,
+                1
+              ],
+              "all_logits_finite": true,
+              "token_log_probabilities": [
+                -0.40108436346054077,
+                0.0,
+                0.0
+              ],
+              "sum_log_probability": -0.40108436346054077,
+              "mean_log_probability": -0.13369478285312653
+            },
+            "1": {
+              "target_ids_including_eos": [
+                209,
+                1
+              ],
+              "all_logits_finite": true,
+              "token_log_probabilities": [
+                -1.117889404296875,
+                0.0
+              ],
+              "sum_log_probability": -1.117889404296875,
+              "mean_log_probability": -0.5589447021484375
+            }
+          }
+        }
+      ],
+      "dtype": "torch.float32",
+      "resolved_revision": null
+    }
+  ],
+  "label_token_ids": {
+    "0": [
+      3,
+      632
+    ],
+    "1": [
+      209
+    ]
+  },
+  "label_score_definition": "Teacher-forced sum of log probabilities for all label tokens plus EOS; mean also reported."
+}

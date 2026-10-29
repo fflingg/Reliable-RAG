@@ -1,0 +1,2 @@
+autorater,status,expected,completed,valid_predictions,invalid_outputs,invalid_positive,invalid_negative,invalid_output_policy,errors,F1 Score,Accuracy,Precision,Recall,TP,TN,FP,FN
+true_nli,complete,528,528,523,5,0,5,"count_as_wrong; invalid positive=FN, invalid negative=FP; raw prediction remains null",0,0.8316831683168316,0.8390151515151515,0.8713692946058091,0.7954545454545454,210,233,31,54
