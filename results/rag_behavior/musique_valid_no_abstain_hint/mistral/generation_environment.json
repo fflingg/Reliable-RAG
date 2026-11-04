@@ -1,0 +1,13 @@
+{
+  "model": {
+    "id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "precision": "fp16",
+    "family": "causal"
+  },
+  "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "torch": "2.7.1+cu118",
+  "transformers": "5.21.0",
+  "bitsandbytes": "0.50.2",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "compute_dtype": "float16"
+}

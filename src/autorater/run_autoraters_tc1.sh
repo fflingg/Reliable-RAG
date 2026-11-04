@@ -16,13 +16,19 @@
 #SBATCH --error=autoraters_%j.err
 set -euo pipefail
 if [[ $# -lt 1 ]]; then
-    echo 'Usage: sbatch run_autoraters_tc1.sh {qwen_0shot|qwen_1shot|true_nli} [options]' >&2
+    echo 'Usage: sbatch run_autoraters_tc1.sh {qwen_0shot|qwen_1shot|true_nli|qwen38_0shot|qwen38_1shot} [options]' >&2
     exit 1
 fi
 autorater="$1"
 shift
+profile_options=()
 case "$autorater" in
     qwen_0shot|qwen_1shot|true_nli) ;;
+    qwen38_0shot|qwen38_1shot)
+        autorater="${autorater/qwen38/qwen}"
+        profile_options=(--qwen-model Qwen/Qwen3.8-27B --qwen-precision int4 --qwen-dtype fp16
+                         --experiment-name qwen3.8_27b_int4)
+        ;;
     *) echo "Unknown autorater: $autorater" >&2; exit 1 ;;
 esac
 # Keep the positional selection unambiguous; pass all other Python flags through.
@@ -66,4 +72,4 @@ export HF_HOME="${HF_HOME:-$project_root/.model_cache}"
 export TOKENIZERS_PARALLELISM=false
 nvidia-smi
 echo "Autorater: $autorater; default scope: full validation split (528 contexts)"
-"$venv_python" -u "$project_root/src/autorater/autorater_benchmark.py" --root "$project_root" --method "$autorater" "$@"
+"$venv_python" -u "$project_root/src/autorater/autorater_benchmark.py" --root "$project_root" --method "$autorater" "${profile_options[@]}" "$@"

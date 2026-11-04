@@ -1,0 +1,13 @@
+{
+  "model": {
+    "id": "Qwen/Qwen3.8-27B",
+    "precision": "nf4",
+    "family": "qwen"
+  },
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "torch": "2.7.1+cu118",
+  "transformers": "5.21.0",
+  "bitsandbytes": "0.50.2",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "compute_dtype": "float16"
+}

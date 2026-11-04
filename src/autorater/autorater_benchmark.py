@@ -1,4 +1,4 @@
-"""SufficiencyBench: Qwen3.5 0/1-shot and TRUE-NLI. No inference on import."""
+"""SufficiencyBench: Qwen-family 0/1-shot and TRUE-NLI. No inference on import."""
 from __future__ import annotations
 
 import argparse
@@ -183,12 +183,22 @@ def run(args):
     demo = select_demo(load_rows(files['train']),
                        load_rows(files['validation']) + load_rows(files['test']), args.seed)
     config = {key: value for key, value in vars(args).items() if key not in ['root', 'output', 'prepare_only']}
+    # Preserve old configuration identities when the new options are not used.
+    if args.qwen_dtype == 'auto':
+        config.pop('qwen_dtype')
+    if args.experiment_name is None:
+        config.pop('experiment_name')
     config.update(prompt_version=PROMPT_VERSION, instruction=INSTRUCTION,
                   input_hash=digest(rows), demonstration=demo, nli_hypothesis='Google Attributed-QA AutoAIS template',
                   positive_class='sufficient=1', qwen_thinking=False, decoding='greedy',
                   data_sha256={name: hashlib.sha256(path.read_bytes()).hexdigest() for name, path in files.items()})
     # Each job owns its output directory: no concurrent writes between autoraters.
-    folder = args.output or root / 'results' / 'autoraters' / args.split / args.method
+    base_folder = root / 'results' / 'autoraters'
+    if args.experiment_name:
+        if re.fullmatch(r'[A-Za-z0-9_.-]+', args.experiment_name) is None or args.experiment_name in ('.', '..'):
+            raise ValueError('Experiment name must be a single simple directory name.')
+        base_folder = base_folder / args.experiment_name
+    folder = args.output or base_folder / args.split / args.method
     folder = folder.resolve()
     folder.mkdir(parents=True, exist_ok=True)
     config_path = folder / 'config.json'
@@ -235,7 +245,12 @@ def run(args):
                     kwargs['dtype'] = torch.bfloat16 if args.nli_precision == 'bf16' else torch.float32
                 model = AutoModelForSeq2SeqLM.from_pretrained(model_id, **kwargs).eval()
             else:
-                kwargs['dtype'] = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+                if args.qwen_dtype == 'auto':
+                    kwargs['dtype'] = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+                else:
+                    if args.qwen_dtype == 'bf16' and not torch.cuda.is_bf16_supported(including_emulation=False):
+                        raise ValueError('Explicit BF16 requires native hardware support; use fp16 on V100.')
+                    kwargs['dtype'] = torch.float16 if args.qwen_dtype == 'fp16' else torch.bfloat16
                 if args.qwen_precision == 'int4':
                     kwargs['quantization_config'] = BitsAndBytesConfig(
                         load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_compute_dtype=kwargs['dtype'])
@@ -299,6 +314,10 @@ def parser():
     result.add_argument('--qwen-revision', default='main')
     result.add_argument('--nli-revision', default='main')
     result.add_argument('--qwen-precision', choices=['auto', 'int4'], default='auto')
+    result.add_argument('--qwen-dtype', choices=['auto', 'fp16', 'bf16'], default='auto',
+                        help='Compute dtype; fp16 avoids emulated BF16 on V100.')
+    result.add_argument('--experiment-name', default=None,
+                        help='Isolate a new experiment under results/autoraters/NAME/SPLIT/METHOD.')
     result.add_argument('--nli-precision', choices=['int8', 'bf16', 'fp32'], default='int8')
     result.add_argument('--max-input-tokens', type=int, default=8192)
     result.add_argument('--seed', type=int, default=42)

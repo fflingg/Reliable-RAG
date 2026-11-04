@@ -1,0 +1,8 @@
+{
+  "torch": "2.7.1+cu118",
+  "transformers": "5.21.0",
+  "gpu": "Tesla V100-PCIE-32GB",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "compute_dtype": "float16",
+  "weights": "NF4"
+}

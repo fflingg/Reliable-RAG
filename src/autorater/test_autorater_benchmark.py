@@ -7,6 +7,14 @@ from autorater_benchmark import binary_metrics, parse_qwen, qwen_messages, nli_t
 
 
 class ProtocolChecks(unittest.TestCase):
+    def test_qwen38_profile_options(self):
+        args = parser().parse_args(['--method', 'qwen_1shot', '--qwen-model', 'Qwen/Qwen3.8-27B',
+                                   '--qwen-precision', 'int4', '--qwen-dtype', 'fp16',
+                                   '--experiment-name', 'qwen3.8_27b_int4'])
+        self.assertEqual(args.qwen_model, 'Qwen/Qwen3.8-27B')
+        self.assertEqual(args.qwen_dtype, 'fp16')
+        self.assertEqual(args.limit_questions, 0)
+
     def test_invalid_output_is_incorrect_for_both_classes(self):
         result = binary_metrics([1, 0, 1, 0], [1, 0, None, None], invalid_as_wrong=True)
         for metric in ['F1 Score', 'Accuracy', 'Precision', 'Recall']:

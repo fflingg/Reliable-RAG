@@ -1,0 +1,2 @@
+-r ../autorater/requirements-autoraters.txt
+gdown>=5.2,<6

@@ -25,13 +25,12 @@ construct dataset with sufficient context autorater 选一个autorater/拿几个
 
 compare the rate of correct / hallucinate / abstain
 
-## (2) existing technique of reducing hallucination / increasing abstention (refuse to answer)
+## (2) baseline: existing technique of reducing hallucination / increasing abstention (refuse to answer)
 combine the sufficient context autorater outputs with model self-rated confidence scores to train a simple linear model to predict hallucinations,
 and then use it to set coverage-accuracy trade-off thresholds. section 5.1
 
 
-## (3) baseline
 
-## (4) new method
+## (3) new method
 
-## (5) experiment
+

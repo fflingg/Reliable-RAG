@@ -1,0 +1,2 @@
+autorater,status,expected,completed,valid_predictions,invalid_outputs,invalid_positive,invalid_negative,invalid_output_policy,errors,F1 Score,Accuracy,Precision,Recall,TP,TN,FP,FN
+qwen_0shot,complete,528,528,527,1,1,0,"count_as_wrong; invalid positive=FN, invalid negative=FP; raw prediction remains null",0,0.831889081455806,0.8162878787878788,0.7667731629392971,0.9090909090909091,240,191,73,24

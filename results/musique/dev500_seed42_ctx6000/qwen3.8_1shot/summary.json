@@ -1,0 +1,12 @@
+{
+  "total": 500,
+  "valid": 459,
+  "sufficient": 169,
+  "insufficient": 290,
+  "invalid": 41,
+  "runtime_errors": 0,
+  "pending": 0,
+  "ready_for_analysis": false,
+  "label_source": "Qwen autorater, not human gold",
+  "sufficient_fraction_among_valid": 0.3681917211328976
+}
