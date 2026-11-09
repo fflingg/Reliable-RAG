@@ -1,0 +1,44 @@
+[
+  {
+    "model": "qwen38",
+    "total": 459,
+    "usable": 376,
+    "complete": false,
+    "excluded": {
+      "generation_invalid": 81,
+      "evaluation_invalid": 2
+    },
+    "categories": {
+      "correct": 305,
+      "abstain": 38,
+      "hallucinate": 33
+    }
+  },
+  {
+    "model": "llama31",
+    "total": 459,
+    "usable": 393,
+    "complete": false,
+    "excluded": {
+      "generation_invalid": 65,
+      "evaluation_invalid": 1
+    },
+    "categories": {
+      "correct": 148,
+      "hallucinate": 159,
+      "abstain": 86
+    }
+  },
+  {
+    "model": "mistral",
+    "total": 459,
+    "usable": 459,
+    "complete": true,
+    "excluded": {},
+    "categories": {
+      "correct": 71,
+      "hallucinate": 170,
+      "abstain": 218
+    }
+  }
+]
