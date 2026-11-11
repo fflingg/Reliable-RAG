@@ -1,0 +1,22 @@
+{
+  "confidence_config_digest": "2f0969b7cdc03a8c02f00e2c7c570baec60fb62899258ac43e58582e902cc11f",
+  "feature_digest": "024f7f5e469c13016595d2b27e25a9f5b8479802a8973120c82f267ddcf7a30c",
+  "searches": 100,
+  "seed": 42,
+  "target_coverages": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "training": "correct vs hallucinate among native non-abstentions; P(correct) score",
+  "selection": "validation log loss; no refit; validation coverage thresholds; held-out test metrics",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.4"
+}
